@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Portfólio • Wadillen Cesar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* SECTIONS */
+.section {
+    display: none;
+    animation: fade 0.5s ease;
+}
+
+.section.active { display: block; }
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MENU */
+.menu {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.menu h2 { font-size: 32px; }
+
+.menu p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 16px 34px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* BOX */
+.box {
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.box h2 {
+    margin-top: 0;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+/* LIST */
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+/* CERTIFICADOS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #020617;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card:hover { transform: translateY(-6px); }
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background: #020617;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    header h1 { font-size: 28px; }
+    .btn { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Wadillen Cesar</h1>
+    <p>Portfólio Profissional • Tecnologia da Informação</p>
+</header>
+
+<div class="container">
+
+<!-- MENU -->
+<div id="menu" class="section active menu">
+    <h2>Bem-vindo 👋</h2>
+    <p>Conheça meu perfil profissional</p>
+
+    <div class="buttons">
+        <button class="btn" onclick="show('curriculo')">📄 Currículo</button>
+        <button class="btn" onclick="show('certificados')">🏆 Certificados</button>
+        <button class="btn" onclick="show('contato')">💬 Contato</button>
+    </div>
+</div>
+
+<!-- CURRÍCULO -->
+<div id="curriculo" class="section">
+    <div class="box">
+        <h2>Perfil Profissional</h2>
+        <p>
+            Profissional em formação na área de Tecnologia da Informação, com conhecimentos
+            em informática básica, suporte técnico, hardware e software.
+            Possuo facilidade de aprendizado, boa comunicação e vontade constante
+            de evoluir profissionalmente.
+        </p>
+        <p>
+            Sou responsável, proativo, sei trabalhar em equipe e tenho facilidade
+            para lidar com o público e resolver problemas relacionados à tecnologia.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Competências</h2>
+        <ul>
+            <li>Suporte técnico básico</li>
+            <li>Montagem e manutenção de computadores</li>
+            <li>Instalação de sistemas operacionais</li>
+            <li>Conhecimentos em hardware e software</li>
+            <li>Boa comunicação e trabalho em equipe</li>
+            <li>Aprendizado rápido</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Formação e Cursos</h2>
+        <ul>
+            <li>Informática Básica – 95 horas</li>
+            <li>Windows</li>
+            <li>Microsoft Word</li>
+            <li>Microsoft Excel</li>
+            <li>Microsoft PowerPoint</li>
+            <li>Canva</li>
+            <li>Montagem e Manutenção de Computadores</li>
+            <li>Hardware e Software</li>
+            <li>Instalação de sistemas e programas</li>
+        </ul>
+    </div>
+
+    <button class="btn" onclick="show('menu')">⬅ Voltar</button>
+</div>
+
+<!-- CERTIFICADOS -->
+<div id="certificados" class="section">
+    <div class="box">
+        <h2>Certificados</h2>
+        <p>Clique para visualizar</p>
+    </div>
+
+    <div class="cards">
+        <div class="card"><a href="certificado1.png" target="_blank"><img src="certificado1.png"></a></div>
+        <div class="card"><a href="certificado2.png" target="_blank"><img src="certificado2.png"></a></div>
+        <div class="card"><a href="certificado3.png" target="_blank"><img src="certificado3.png"></a></div>
+        <div class="card"><a href="certificado4.png" target="_blank"><img src="certificado4.png"></a></div>
+    </div>
+
+    <br>
+    <button class="btn" onclick="show('menu')">⬅ Voltar</button>
+</div>
+
+<!-- CONTATO -->
+<div id="contato" class="section">
+    <div class="box">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo:</p>
+
+        <a class="btn" href="https://wa.me/558199766437" target="_blank">💬 WhatsApp</a>
+        <br><br>
+        <a class="btn" href="mailto:wadellencesar2@gmail.com">📧 Email</a>
+    </div>
+
+    <button class="btn" onclick="show('menu')">⬅ Voltar</button>
+</div>
+
+</div>
+
+<footer>
+    © 2026 • Wadellen Cesar
+</footer>
+
+<script>
+function show(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
